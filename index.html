@@ -3,65 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>My Enhanced Website</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-            text-align: center;
+            color: #333;
         }
         header {
             background-color: #4CAF50;
             color: white;
             padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         nav {
-            margin: 10px 0;
+            margin: 0;
         }
         nav a {
-            margin: 0 15px;
             color: white;
             text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
         }
         nav a:hover {
             text-decoration: underline;
         }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
         main {
+            padding: 20px 0;
+            text-align: left;
+        }
+        main h2 {
+            color: #4CAF50;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        .content {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .content .card {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
             padding: 20px;
+            flex: 1;
+            margin: 0 10px;
+        }
+        .content .card h3 {
+            margin-top: 0;
         }
         footer {
             background-color: #4CAF50;
             color: white;
-            padding: 10px 0;
+            padding: 20px 0;
+            text-align: center;
             position: fixed;
             width: 100%;
             bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
+        <div class="container">
+            <h1>My Website</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <h2>Hello, World!</h2>
-        <p>This is the homepage of my website. Feel free to explore and learn more about what we have to offer.</p>
-        <button onclick="showAlert()">Click Me!</button>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to My Website</h1>
+            <p>Your gateway to amazing content</p>
+        </div>
+    </section>
+    <main class="container">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing the best content for our users. Explore our site to find out more about what we offer.</p>
+        <div class="content">
+            <div class="card">
+                <h3>Quality Content</h3>
+                <p>Our content is curated and created by experts to ensure you get the best information and entertainment.</p>
+            </div>
+            <div class="card">
+                <h3>Community Focus</h3>
+                <p>We believe in building a community where everyone can share and learn together. Join us today!</p>
+            </div>
+            <div class="card">
+                <h3>Latest News</h3>
+                <p>Stay updated with the latest trends and news in your favourite categories. We bring you the freshest updates.</p>
+            </div>
+        </div>
     </main>
     <footer>
-        <p>&copy; 2024 My Website</p>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
     </footer>
-    <script>
-        function showAlert() {
-            alert('Button clicked!');
-        }
-    </script>
 </body>
 </html>
+
